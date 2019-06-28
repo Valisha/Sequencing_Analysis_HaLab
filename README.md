@@ -3,7 +3,7 @@
 ### 1. Fasta File Assignment
 
 Include script, complete instructions for running the script, and outputs as follows. 
-Parse the fasta file provided [Sequencing Analysis Assignment.fasta](Sequencing Analysis Assignment.fasta)
+Parse the fasta file provided [Sequencing_Analysis_Assignment.fasta](Sequencing_Analysis_Assignment.fasta)
 - Generate a tab-delimited table in plain-text format containing, for each entry in the fasta file,  
 	- column 1: Read ID   
 	- column 2: Length of the nucleotide sequence   
