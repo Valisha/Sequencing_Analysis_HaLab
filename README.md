@@ -23,7 +23,7 @@ For paired-end sequencing, what do the terms ‘insert size’ and ‘fragment s
 
 How can distributions of fragment sizes and insert sizes be used to call somatic alterations?
 
-Download the chromosome 20 bam file [HG00096.chrom20.ILLUMINA.bwa.GBR.low_coverage.20120522.bam](HG00096.chrom20.ILLUMINA.bwa.GBR.low_coverage.20120522.bam) and its corresponding .bai file from here:  
+Download the chromosome 20 bam file HG00096.chrom20.ILLUMINA.bwa.GBR.low_coverage.20120522.bam and its corresponding .bai file from here:  
 - ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/HG00096/alignment/
 
 Find fragment sizes for mapped read pairs and plot their distribution with fragment size as the X axis. Document and explain all the steps and commands you execute.
