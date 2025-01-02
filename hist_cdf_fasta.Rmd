@@ -24,12 +24,20 @@ data <- fread("/Users/valishashah/Desktop/all_projects/HaLab_assessment/Sequenci
 ```{r}
 
 ggplot(data, aes(x = length)) +
-  geom_histogram(binwidth = 10, fill = "skyblue", color = "black", alpha = 0.7) +
+  geom_histogram(binwidth = 100, fill = "skyblue", color = "black", alpha = 0.7) +
   labs(title = "Distribution of Read Lengths", x = "Read Length", y = "Frequency") +
   theme_minimal()
 
 ### A lot of short reads 
 ### Very few long reads 
+
+
+### zoom into the 0-4000 read lengths 
+ggplot(data, aes(x = length)) +
+  geom_histogram(binwidth = 100, fill = "skyblue", color = "black", alpha = 0.7) +
+  labs(title = "Distribution of Read Lengths", x = "Read Length", y = "Frequency") +
+  theme_minimal() + 
+  xlim(c(0, 4000))
 
 
 ```
