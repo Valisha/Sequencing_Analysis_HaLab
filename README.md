@@ -24,9 +24,16 @@
 
 ### 3. For paired-end sequencing, how can distributions of insert sizes be used to reveal certain types of somatic alterations?
 In paired-end sequencing, insert size distributions provide valuable insights into the structure of the sequenced genome. Variations in these distributions can indicate specific types of somatic alterations:
-*1.	Deletions:* When a region of the genome is deleted, paired-end reads that were once mapped across the deletion site may now be mapped with smaller than expected insert sizes because the physical distance between paired reads is reduced due to the missing segment. 
-*2.	Duplications:* In contrast, in regions with duplications, paired-end reads can have larger than expected insert sizes because the same pair of reads might map to duplicated regions, increasing the distance between the paired reads.
-*3.	Structural Variants (SVs):* Larger structural variations, such as inversions or translocations, can lead to abnormal insert size distributions, as the paired reads may map in unexpected locations or orientations. This will cause the insert sizes to be either too small or too large compared to the typical distribution.
+
+##### 1. Deletions:
+When a region of the genome is deleted, paired-end reads that were once mapped across the deletion site may now be mapped with smaller than expected insert sizes because the physical distance between paired reads is reduced due to the missing segment. 
+
+##### 2. Duplications: 
+In contrast, in regions with duplications, paired-end reads can have larger than expected insert sizes because the same pair of reads might map to duplicated regions, increasing the distance between the paired reads.
+
+##### 3. Structural Variants (SVs):
+Larger structural variations, such as inversions or translocations, can lead to abnormal insert size distributions, as the paired reads may map in unexpected locations or orientations. This will cause the insert sizes to be either too small or too large compared to the typical distribution.
+
 Lumpy-SV and Manta could be used to detect these structural variants. And once these structural variants are identified, they can be visualized in IGV or UCSC Genome Browser
 By comparing the observed insert size distribution with the expected distribution based on the reference genome, one can infer the presence of somatic alterations like deletions, duplications, and other structural variants.
 
