@@ -1,1 +1,4 @@
 *.bam
+*.fasta
+*.bai
+*.txt
