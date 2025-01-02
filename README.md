@@ -1,10 +1,9 @@
 # Sequencing_analysis_assignment
 
-### 1. Fasta File Assignment
+## 1. Fasta File Assignment
 
-Include script, complete instructions for running the script, and outputs as follows. 
-Parse the fasta file provided [Sequencing_Analysis_Assignment.fasta](Sequencing_Analysis_Assignment.fasta)
-- Generate a tab-delimited table in plain-text format containing, for each entry in the fasta file,  
+### Included scripts are - 
+#### a. create_table_from_fasta.py - Generate a tab-delimited table from the fasta file using python scripting
 	- column 1: Read ID   
 	- column 2: Length of the nucleotide sequence   
 	- column 3: The 5-mer centered on the midpoint of the sequence   
