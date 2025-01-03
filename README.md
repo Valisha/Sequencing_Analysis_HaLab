@@ -26,7 +26,9 @@
 
 ### Execute the script using - 
 1. 		sh download_bam_bai.sh
-2.		python3 plot_insert_sizes.py 	
+2.		python3 plot_insert_sizes.py
+   Picard sript -
+3.		sh plot_inserts_picard.sh 
 
 ### 3. For paired-end sequencing, how can distributions of insert sizes be used to reveal certain types of somatic alterations?
 In paired-end sequencing, insert size distributions provide valuable insights into the structure of the sequenced genome. Variations in these distributions can indicate specific types of somatic alterations:
