@@ -22,11 +22,11 @@ samtools index HG00096.chrom20.ILLUMINA.bwa.GBR.low_coverage.20120522.bam
 # bedtools genomecov -ibam HG00096.chrom20.ILLUMINA.bwa.GBR.low_coverage.20120522.bam > coverage.txt
 
 ### Filter out the negative insert sizes
-# samtools view -f 1 -F 12 HG00096.chrom20.ILLUMINA.bwa.GBR.low_coverage.20120522.bam | awk '$9 >= 0 {print $0}' > filtered_bam.bam
+samtools view -f 1 -F 12 HG00096.chrom20.ILLUMINA.bwa.GBR.low_coverage.20120522.bam | awk '$9 >= 0 {print $0}' > filtered_bam.bam
 
 ### save the filtered bam as a table 
 
 awk '{print $9}' filtered_bam.bam > insert_sizes_filtered.txt
 
-
+###### insert sizes - picard collect insert sizes
 
