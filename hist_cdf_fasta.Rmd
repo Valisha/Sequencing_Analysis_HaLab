@@ -52,10 +52,12 @@ two_mer_columns <- colnames(data)[5:20]
 # Define a function to calculate 2-mer frequencies for a sequence
 calculate_two_mer_frequencies <- function(row) {
   # Get the counts of each 2-mer
+  print(row[two_mer_columns])
   counts <- as.numeric(row[two_mer_columns])
-  
+
   # Add 1 to each count to obtain pseudo-counts
   pseudo_counts <- counts + 1
+  print(pseudo_counts)
   
   # Calculate the total number of pseudo-counts
   total_count <- sum(pseudo_counts)
@@ -86,3 +88,59 @@ ggplot(long_data, aes(x = frequency, color = two_mer)) +
 
 
 ```
+
+
+```{r}
+
+# Load required libraries
+library(ggplot2)
+
+# Example genomic sequences
+sequences <- data$`5-mer`
+
+# Function to calculate 2-mer frequencies
+calculate_2mer_frequency <- function(sequence) {
+  # Initialize an empty list to store 2-mer counts
+  counts <- list()
+  
+  # Loop through the sequence and count 2-mers
+  for (i in 1:(nchar(sequence) - 1)) {
+    kmer <- substr(sequence, i, i + 1)
+    if (kmer %in% names(counts)) {
+      counts[[kmer]] <- counts[[kmer]] + 1
+    } else {
+      counts[[kmer]] <- 1
+    }
+  }
+  
+  # Add pseudo-count of 1 to each 2-mer count
+  pseudo_counts <- sapply(counts, function(x) x + 1)
+  
+  # Calculate the total sum of pseudo-counts
+  total_count <- sum(pseudo_counts)
+  
+  # Calculate the frequency of each 2-mer
+  frequencies <- pseudo_counts / total_count
+  return(frequencies)
+}
+
+# Collect frequencies for all sequences
+all_frequencies <- unlist(lapply(sequences, calculate_2mer_frequency))
+
+# Plot the cumulative distribution
+ggplot(data.frame(frequency = all_frequencies), aes(x = frequency)) +
+  stat_ecdf(geom = "step", aes(y = ..y..), color = "blue") +
+  labs(title = "Cumulative Distribution of 2-mer Frequencies", 
+       x = "Frequency", 
+       y = "Cumulative Frequency") +
+  theme_minimal()
+
+
+```
+
+
+
+
+
+
+
