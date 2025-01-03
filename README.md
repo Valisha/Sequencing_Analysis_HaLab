@@ -15,12 +15,18 @@
    i. Plot the distribution of read lengths (column 2 of the table you will generate) as a histogram  
    ii. Given a genomic signature C of a sequence S, the vector F of frequencies of 2-mers appearing in S is obtained first by adding one to each of the components of C to obtain a vector P of pseudo-counts. Then, letting L be the sum of the components of P, the frequency of the 2-mer x is calculated as follows: Fx = Px/L.
 	
-	
+### Execute the script using - 
+	python3 create_table_from_fasta.py
+
 ## 2. NGS Familiarity Assignment
 
 ### Included scripts are - 
 ##### a. download_bam_bai.sh - Download the bam file, filter the poorly mapped inserts and create a txt file with insert sizes 
 ##### b. plot_insert_sizes.py - plot the distribution with fragment size as the X axis. 
+
+### Execute the script using - 
+1. 		sh download_bam_bai.sh
+2.		python3 plot_insert_sizes.py 	
 
 ### 3. For paired-end sequencing, how can distributions of insert sizes be used to reveal certain types of somatic alterations?
 In paired-end sequencing, insert size distributions provide valuable insights into the structure of the sequenced genome. Variations in these distributions can indicate specific types of somatic alterations:
